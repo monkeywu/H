@@ -18,3 +18,8 @@ $(document).ready(function(){
 		}	
 	})
 });
+
+$('tr').on('click',function(){
+	$(this).toogleClass('selected');
+})
+
