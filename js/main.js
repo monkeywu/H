@@ -20,10 +20,10 @@ $(document).ready(function(){
 			
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
-				var key = data[i].key
 					for(let j =0;j<1000;j++){
+						var key = data[j].key
 						if(key === dataKey){
-							$('tbody').find('tr').eq(i).append('<td>'+data[i].cell8+'</td>');
+							$('tbody').find('tr').eq(i).append('<td>'+data[j].cell8+'</td>');
 						}
 					}
 			}
