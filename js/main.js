@@ -22,6 +22,11 @@ $(document).ready(function(){
 		console.log(data);
 		console.log(data.length);
 	})
+
+	$.get(urlData3,function(data){
+		console.log(data);
+		console.log(data.length);
+	})
 });
 
 $(document).on('click','tr',function(){
