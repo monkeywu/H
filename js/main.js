@@ -20,15 +20,12 @@ $(document).ready(function(){
 			
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
-				for(let key in data[i]){
-					console.log(key);
+				var key = data[i].key
 					console.log(data[i]);
-					console.log(data[i][key]);
 					console.log('-----');
 					if(key === dataKey){
-						$('tbody').find('tr').eq(i).append('<td>'+data[i][key]+'</td>');
+						$('tbody').find('tr').eq(i).append('<td>'+data[i].cell8+'</td>');
 					}
-				}
 			}
 		})	
 	})
