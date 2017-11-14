@@ -17,6 +17,11 @@ $(document).ready(function(){
 			}
 		}	
 	})
+
+	$.get(ruldata2,function(data){
+		console.log(data);
+		console.log(data.length);
+	})
 });
 
 $(document).on('click','tr',function(){
