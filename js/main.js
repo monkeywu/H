@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-			console.log(data[i].length);
+			console.log(data[i]);
 			for(let j = 0;j<data[i].length;j++){
 				console.log(data[i][j]);
 				//$('tr').append('<tr><td>'+data[i][j]+'</td></tr>');
