@@ -43,7 +43,8 @@ $(document).ready(function(){
 				}
 				console.timeEnd('time');
 				var endTime = new Date().getTime();
-				console.log((endTime - startTime) / 1000 );
+				var costTime = Math.floor(endTime - startTime )
+				$('.usuage').html(costTime);
 			})
 		})	
 
