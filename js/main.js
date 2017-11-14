@@ -4,14 +4,12 @@ $(document).ready(function(){
 	 var urlData3 = "data/data3.json";
 	$.get(urlData1,function(data){
 		var length = data.length;
-		var trString = '<tr>'
 		for (let i =0;i<length;i++){
+				$('tr').after('<tr></tr>');
 			for (let key in data[i]) {
-			    trString += '<td>'+data[i][key]+'</td>'
+			    $('tr').last().append('<td>'+data[i][key]+'</td>');
 			    //$('tr').after('<td>'+data[i][key]+'</td>');
 			}
-			trString += '</tr>'
-			$('tr').append(trString);
 		}	
 	})
 });
