@@ -19,7 +19,7 @@ $(document).ready(function(){
 	})
 });
 
-$('tr').on('click',function(){
+$('table').on('click','tr',function(){
 	$(this).toogleClass('selected');
 })
 
