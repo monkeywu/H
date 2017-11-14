@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 			for (let value of Object.values(data[i])) {
-			    console.log(data[i]);
+			    console.log(value);
 			}
 				//$('tr').append('<tr><td>'+data[i][j]+'</td></tr>');
 		}	
