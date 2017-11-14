@@ -8,7 +8,6 @@ $(document).ready(function(){
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
-				console.log(Object.values(data));
 			for (let key in data[i]) {
 				if(key === "key"){
 					$('tr').last().append('<td><span class="star"></span>'+data[i][key]+'</td>');	
@@ -18,8 +17,11 @@ $(document).ready(function(){
 			}
 		}
 	})
+	var endTime = new Date().getTime();
+				var costTime = Math.floor(endTime - startTime )
+				$('.usuage').html(costTime);
 
-	$.get(urlData2,function(data){
+	/*$.get(urlData2,function(data){
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
 					for(let j =0;j<1000;j++){
@@ -49,7 +51,7 @@ $(document).ready(function(){
 				var endTime = new Date().getTime();
 				var costTime = Math.floor(endTime - startTime )
 				$('.usuage').html(costTime);
-			})
+			})*/
 });
 
 $(document).on('click','tr',function(){
