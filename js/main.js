@@ -11,7 +11,6 @@ $(document).ready(function(){
 			for (let key in data[i]) {
 			    $('tr').last().append('<td>'+data[i][key]+'</td>');
 			}
-			$('tbody tr td:first-child').append('<span class="stat"></span>');
 		}	
 	})
 });
