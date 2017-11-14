@@ -17,7 +17,6 @@ $(document).ready(function(){
 		}
 
 		$.get(urlData2,function(data){
-			
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
 					for(let j =0;j<1000;j++){
@@ -27,14 +26,21 @@ $(document).ready(function(){
 						}
 					}
 			}
+		})
+
+		$.get(urlData3,function(data){
+			for(let i = 0;i<data.length;i++){
+				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(4).text();
+				console.log(data[i]);
+					for(let j =0;j<1000;j++){
+						var key = data[j].cell4
+						if(key === dataKey){
+							$('tbody').find('tr').eq(i).append('<td>'+data[j].cell9+'</td>');
+						}
+					}
+			}
 		})	
-	})
 
-	
-
-	$.get(urlData3,function(data){
-		
-		
 	})
 });
 
