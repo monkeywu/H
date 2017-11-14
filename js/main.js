@@ -26,12 +26,10 @@ $(document).ready(function(){
 						}
 					}
 			}
-		})
 
-		$.get(urlData3,function(data){
+			$.get(urlData3,function(data){
 			var objkey = Object.values(data);
 			var length = Object.values(data).length;
-			console.log(length);
 			for(let i = 0;i<length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(4).text();
 					for(let j =0;j<1000;j++){
@@ -40,7 +38,8 @@ $(document).ready(function(){
 							$('tbody').find('tr').eq(i).append('<td>'+objkey[j].cell9+'</td>');
 						}
 					}
-			}
+				}
+			})
 		})	
 
 	})
