@@ -21,11 +21,10 @@ $(document).ready(function(){
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
 				var key = data[i].key
-					console.log(data[i]);
-					console.log(key);
-					console.log('-----');
-					if(key === dataKey){
-						$('tbody').find('tr').eq(i).append('<td>'+data[i].cell8+'</td>');
+					for(let j =0;j<1000;j++){
+						if(key === dataKey){
+							$('tbody').find('tr').eq(i).append('<td>'+data[i].cell8+'</td>');
+						}
 					}
 			}
 		})	
