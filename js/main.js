@@ -4,5 +4,5 @@ $(document).ready(function(){
 	 var urlData3 = "../data/data3.json";
 	$.getJSON("/urlData1", function(data){ 
 		console.log(data);
-	}
+	});
 });
