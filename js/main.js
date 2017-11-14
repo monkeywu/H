@@ -19,7 +19,8 @@ $(document).ready(function(){
 	})
 });
 
-$('table').on('click','tr',function(){
+$(document).on('click','tr',function(){
+	console.log(this);
 	$(this).toogleClass('selected');
 })
 
