@@ -29,14 +29,15 @@ $(document).ready(function(){
 		})
 
 		$.get(urlData3,function(data){
-			console.log(Object.values(data));
-			for(let i = 0;i<data.length;i++){
+			var objkey = Object.values(data);
+			var length = Object.values(data).length;
+			console.log(length);
+			for(let i = 0;i<length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(4).text();
-				console.log(data[i]);
 					for(let j =0;j<1000;j++){
-						var key = data[j].cell4
+						var key = objkey[j].cell4
 						if(key === dataKey){
-							$('tbody').find('tr').eq(i).append('<td>'+data[j].cell9+'</td>');
+							$('tbody').find('tr').eq(i).append('<td>'+objkey[j].cell9+'</td>');
 						}
 					}
 			}
