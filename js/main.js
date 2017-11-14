@@ -4,7 +4,6 @@ $(document).ready(function(){
 	 var urlData3 = "data/data3.json";
 	$.get(urlData1,function(data){
 		var length = data.length;
-		console.log(length);
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
@@ -18,11 +17,14 @@ $(document).ready(function(){
 		}
 
 		$.get(urlData2,function(data){
-			var dataKey = $('tobdy tr:nth-child(n+1) td:first-child').val();
-			console.log(dataKey);
+			
 			for(let i = 0;i<data.length;i++){
+				var dataKey = $('tbody tr:nth-child(i) td:first-child').text();
+				console.log(dataKey);
 				for(let key in data[i]){
-
+					if(key === dataKey) {
+						
+					}
 				}
 			}
 		})	
