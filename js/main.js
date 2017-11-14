@@ -16,17 +16,23 @@ $(document).ready(function(){
 				}
 			}
 		}
+
 		$.get(urlData2,function(data){
-			console.log(data);
-			console.log(data.length);
+			var dataKey = $('tobdy tr:nth-child(n+1) td:first-child').val();
+			console.log(dataKey);
+			for(let i = 0;i<data.length;i++){
+				for(let key in data[i]){
+
+				}
+			}
 		})	
 	})
 
 	
 
 	$.get(urlData3,function(data){
-		console.log(data);
-		console.log(data.length);
+		
+		
 	})
 });
 
