@@ -18,7 +18,7 @@ $(document).ready(function(){
 		}	
 	})
 
-	$.get(ruldata2,function(data){
+	$.get(urlData2,function(data){
 		console.log(data);
 		console.log(data.length);
 	})
