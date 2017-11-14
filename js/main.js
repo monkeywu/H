@@ -15,13 +15,14 @@ $(document).ready(function(){
 					$('tr').last().append('<td>'+data[i][key]+'</td>');	
 				}
 			}
-		}	
+		}
+		$.get(urlData2,function(data){
+			console.log(data);
+			console.log(data.length);
+		})	
 	})
 
-	$.get(urlData2,function(data){
-		console.log(data);
-		console.log(data.length);
-	})
+	
 
 	$.get(urlData3,function(data){
 		console.log(data);
