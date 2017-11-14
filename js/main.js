@@ -3,6 +3,9 @@ $(document).ready(function(){
 	 var urlData2 = "data/data2.json";
 	 var urlData3 = "data/data3.json";
 	$.get(urlData1,function(data){
-		console.log(data);
+		var length = data.length;
+		for (let i =0;i<length;i++){
+			document.write(data[i]);
+		}
 	})
 });
