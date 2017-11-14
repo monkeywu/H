@@ -6,8 +6,7 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 			for (let key in data[i]) {
-			    console.log(data[i][key]);
-			    //$('tr').append('<tr><td>'+data[i][key]+'</td></tr>');
+			    $('tr').append('<tr><td>'+data[i][key]+'</td></tr>');
 			}
 		}	
 	})
