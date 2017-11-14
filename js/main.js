@@ -10,7 +10,7 @@ $(document).ready(function(){
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 				if(key === "key"){
-					$('tr').last().append('<td><span class="star">'+data[i][key]+'</span></td>');	
+					$('tr').last().append('<td><span class="star"></span>'+data[i][key]+'</td>');	
 				} else {
 					$('tr').last().append('<td>'+data[i][key]+'</td>');	
 				}
