@@ -8,7 +8,7 @@ $(document).ready(function(){
 		for (let i =0;i<length;i++){
 				$('tr').after('<tr></tr>')
 			for (let key in data[i]) {
-			    $('tr').last().append(data[i][key]);
+			    //$('tr').last().append(data[i][key]);
 			    //$('tr').after('<td>'+data[i][key]+'</td>');
 			}
 		}	
