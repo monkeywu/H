@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	 console.time('time');
 	 var startTime = new Date().getTime();
 	 var urlData1 = "data/data1.json";
 	 var urlData2 = "data/data2.json";
@@ -17,8 +16,9 @@ $(document).ready(function(){
 				}
 			}
 		}
+	})
 
-		$.get(urlData2,function(data){
+	$.get(urlData2,function(data){
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
 					for(let j =0;j<1000;j++){
@@ -28,8 +28,12 @@ $(document).ready(function(){
 						}
 					}
 			}
+		})	
 
-			$.get(urlData3,function(data){
+
+
+
+	$.get(urlData3,function(data){
 			var objkey = Object.values(data);
 			var length = Object.values(data).length;
 			for(let i = 0;i<length;i++){
@@ -41,14 +45,10 @@ $(document).ready(function(){
 						}
 					}
 				}
-				console.timeEnd('time');
 				var endTime = new Date().getTime();
 				var costTime = Math.floor(endTime - startTime )
 				$('.usuage').html(costTime);
 			})
-		})	
-
-	})
 });
 
 $(document).on('click','tr',function(){
