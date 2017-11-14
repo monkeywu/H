@@ -5,8 +5,9 @@ $(document).ready(function(){
 	$.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-			for (let value of Object.values(data[i])) {
-			    $('tr').append('<tr><td>'+value+'</td></tr>');
+			for (let key in data[i]) {
+			    console.log(data[i][key]);
+			    //$('tr').append('<tr><td>'+data[i][key]+'</td></tr>');
 			}
 		}	
 	})
