@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var length = data.length;
 		console.log(length);
 		for (let i =0;i<length;i++){
-				$('tr').after('<tr></tr>')
+				console.log(i);
 			for (let key in data[i]) {
 			    //$('tr').last().append(data[i][key]);
 			    //$('tr').after('<td>'+data[i][key]+'</td>');
