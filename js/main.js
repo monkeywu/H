@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
-				console.log(data[i]);
+				console.log(Object.values(data));
 			for (let key in data[i]) {
 				if(key === "key"){
 					$('tr').last().append('<td><span class="star"></span>'+data[i][key]+'</td>');	
