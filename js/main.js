@@ -6,7 +6,8 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 			for(let j = 0;j<data[i].length;j++){
-					$('tr').append('<tr><td>'+data[i][j]+'</td></tr>');
+				console.log(data[i][j]);
+				//$('tr').append('<tr><td>'+data[i][j]+'</td></tr>');
 			}	
 		}
 	})
