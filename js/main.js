@@ -24,7 +24,7 @@ $(document).on('click','tr',function(){
 	$(this).toggleClass('selected');
 })
 
-$(document).on('click','.star',function(){
-	console.log(this);
+$(document).on('click','.star',function(event){
+	event.stopPropagation();
 	$(this).toggleClass('selected');
 })
