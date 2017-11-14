@@ -10,8 +10,8 @@ $(document).ready(function(){
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 			    $('tr').last().append('<td>'+data[i][key]+'</td>');
-			    $('tbody tr td:first-child').append('<span class="stat"></span>');
 			}
+			$('tbody tr td:first-child').append('<span class="stat"></span>');
 		}	
 	})
 });
