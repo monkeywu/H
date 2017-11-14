@@ -22,8 +22,9 @@ $(document).ready(function(){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
 				for(let key in data[i]){
 					console.log(key);
+					console.log(data[i][key]);
 					if(key === dataKey){
-						$('tbody').find('tr').eq(i).append('<td>'+dataKey+'</td>')
+						$('tbody').find('tr').eq(i).append('<td>'+data[i][key]+'</td>');
 					}
 				}
 			}
