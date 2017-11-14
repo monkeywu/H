@@ -16,10 +16,11 @@ $(document).ready(function(){
 				}
 			}
 		}
-	})
-	var endTime = new Date().getTime();
+		var endTime = new Date().getTime();
 				var costTime = Math.floor(endTime - startTime )
 				$('.usuage').html(costTime);
+	})
+
 
 	/*$.get(urlData2,function(data){
 			for(let i = 0;i<data.length;i++){
