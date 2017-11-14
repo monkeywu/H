@@ -9,6 +9,7 @@ $(document).ready(function(){
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
+				console.log(key);
 			    $('tr').last().append('<td>'+data[i][key]+'</td>');
 			}
 		}	
