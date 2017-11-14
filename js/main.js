@@ -19,7 +19,7 @@ $(document).ready(function(){
 		$.get(urlData2,function(data){
 			
 			for(let i = 0;i<data.length;i++){
-				var dataKey = $('tbody tr:nth-child(n) td:first-child').text();
+				var dataKey = $('tbody tr:nth-child(n)').find('td').eq(i).text();
 				console.log(dataKey);
 				for(let key in data[i]){
 					if(key === dataKey) {
