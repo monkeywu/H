@@ -24,3 +24,7 @@ $(document).on('click','tr',function(){
 	$(this).toggleClass('selected');
 })
 
+$(document).on('click','.star',function(){
+	console.log(this);
+	$(this).toggleClass('selected');
+})
