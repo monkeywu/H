@@ -21,6 +21,6 @@ $(document).ready(function(){
 
 $(document).on('click','tr',function(){
 	console.log(this);
-	$(this).toogleClass('selected');
+	$(this).toggleClass('selected');
 })
 
