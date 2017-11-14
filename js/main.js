@@ -22,9 +22,7 @@ $(document).ready(function(){
 				//var dataKey = $('tbody').find('td').eq(0).text();
 				//console.log(dataKey);
 				for(let key in data[i]){
-					if(key === dataKey) {
-						
-					}
+					
 				}
 			}
 		})	
