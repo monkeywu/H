@@ -18,6 +18,7 @@ function checkData3(){
 	for(let i =0;i<Data3.length;i++){
 		for(let j = 0;j<Data3.length;j++){
 			if(Data1[i][4] === Data3[j].cell4 ){
+				console.log('123');
 				Data1[i].push(Data3[j].cell9);
 			}
 		}
