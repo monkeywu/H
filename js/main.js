@@ -15,7 +15,7 @@ function checkData2(callback){
 	callback();
 }
 
-function checkData3(callback1){
+function checkData3(addData){
 	for(let i =0;i<Data3.length;i++){
 		for(let j = 0;j<Data3.length;j++){
 			if(Data1[i][4] === Data3[j].cell4 ){
@@ -23,7 +23,7 @@ function checkData3(callback1){
 			}
 		}
 	}
-	callback1(addData);
+	addData();
 }
 
 function addData(){
