@@ -1,19 +1,19 @@
+var Data1;
+var Data2;
+var Data3;
+
 $(document).ready(function(){
 	 var startTime = new Date().getTime();
 	 var urlData1 = "data/data1.json";
 	 var urlData2 = "data/data2.json";
 	 var urlData3 = "data/data3.json";
 
-	 var Data1;
-	 var Data2;
-	 var Data3;
-
-
 	$.get(urlData1,function(data){
 		var length = data.length;
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				Data1 += data[i];
+				console.log(data[i]);
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 				if(key === "key"){
