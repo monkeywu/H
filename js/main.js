@@ -13,7 +13,7 @@ $(document).ready(function(){
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
 					arr.push(data[i][key]);
-					if(arr.length > 8){
+					if(arr.length === 8){
 						Data1.push(arr);
 						arr = [];
 					}
