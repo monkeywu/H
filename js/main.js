@@ -56,7 +56,7 @@ $(document).ready(function(){
 					}
 				}
 		}
-		addData(checkData3);
+		addData(checkData2);
 	})
 
 	$.get(urlData2,function(data){
