@@ -18,7 +18,6 @@ function checkData3(){
 	for(let i =0;i<Data3.length;i++){
 		for(let j = 0;j<Data3.length;j++){
 			if(Data1[i][4] === Data3[j].cell4 ){
-				console.log('123');
 				Data1[i].push(Data3[j].cell9);
 			}
 		}
@@ -29,9 +28,9 @@ function checkData3(){
 function addData(){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
-		$('tbody').append('<tr><td><span class="star">'+Data1[i][0]+'</span></td></tr>');
+		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td></tr>');
 		for(let j = 0;j<9;j++){
-			$('tbody tr:last-child').append('<td>'+Data1[j][1]+'</td><td>'+Data1[j][2]+'</td><td>'+Data1[j][3]+'</td><td>'+Data1[j][4]+'</td><td>'+Data1[j][5]+'</td><td>'+Data1[j][6]+'</td><td>'+Data1[j][7]+'</td><td>'+Data1[j][8]+'</td><td>'+Data1[j][9]+'</td>');
+			$('tbody td:last-child').append('<td>'+Data1[j][1]+'</td><td>'+Data1[j][2]+'</td><td>'+Data1[j][3]+'</td><td>'+Data1[j][4]+'</td><td>'+Data1[j][5]+'</td><td>'+Data1[j][6]+'</td><td>'+Data1[j][7]+'</td><td>'+Data1[j][8]+'</td><td>'+Data1[j][9]+'</td>');
 		}
 	}
 }
