@@ -5,7 +5,7 @@ var arr1 = [];
 var arr2 = [];
 var startTime = new Date().getTime();
 
-function checkData2(callback){
+function checkData2(){
 	for(let i =0;i<Data2.length;i++){
 		for(let j = 0;j<Data2.length;j++){
 			if(Data1[i][0] === Data2[j][0] ){
@@ -14,10 +14,9 @@ function checkData2(callback){
 		}
 	}
 	console.log('2');
-	callback(addData);
 }
 
-function checkData3(callback){
+function checkData3(){
 	for(let i =0;i<Data3.length;i++){
 		for(let j = 0;j<Data3.length;j++){
 			if(Data1[i][4] === Data3[j].cell4 ){
@@ -29,7 +28,6 @@ function checkData3(callback){
 	var costTime = Math.floor(endTime - startTime )
 	$('.usuage').html(costTime);
 	console.log('3');
-	callback();
 }
 
 function addData(){
@@ -71,7 +69,7 @@ $(document).ready(function(){
 			}
 		})	
 
-	$.get(urlData3,function(data){
+	ajax3 = $.get(urlData3,function(data){
 				var objkey = Object.values(data);
 				var length = Object.values(data).length;
 				for(let i = 0;i<length;i++){
@@ -79,16 +77,17 @@ $(document).ready(function(){
 				}
 			})
 
-	　$.when(ajax1, ajax2).done(function(){
+	　$.when(ajax1, ajax2, ajax3).done(function(){
 
-   　　　　 alert("done");
-
+   　　　　 checkData2();
+   		   checkData3();
+   		   addData();
 　　　　}).fail(function(){
 　　
    　　　　 alert("fail");
     
 　　　　});
-	
+
 });
 
 $(document).on('click','tr',function(){
