@@ -4,7 +4,7 @@ var Data3 = [];
 var arr1 = [];
 var arr2 = [];
 
-function checkData2(checkData3){
+function checkData2(callback){
 	for(let i =0;i<Data2.length;i++){
 		for(let j = 0;j<Data2.length;j++){
 			if(Data1[i][0] === Data2[j][0] ){
@@ -12,10 +12,10 @@ function checkData2(checkData3){
 			}
 		}
 	}
-	checkData3()
+	callback(addData);
 }
 
-function checkData3(addData){
+function checkData3(callback){
 	for(let i =0;i<Data3.length;i++){
 		for(let j = 0;j<Data3.length;j++){
 			if(Data1[i][4] === Data3[j].cell4 ){
@@ -23,10 +23,10 @@ function checkData3(addData){
 			}
 		}
 	}
-	addData();
+	callback();
 }
 
-function addData(result){
+function addData(){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td><td>'+Data1[i][1]+'</td><td>'+Data1[i][2]+'</td><td>'+Data1[i][3]+'</td><td>'+Data1[i][4]+'</td><td>'+Data1[i][5]+'</td><td>'+Data1[i][6]+'</td><td>'+Data1[i][7]+'</td><td>'+Data1[i][8]+'</td><td>'+Data1[i][9]+'</td></tr>');
