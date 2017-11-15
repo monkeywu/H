@@ -3,6 +3,18 @@ var Data2 = [];
 var Data3 = [];
 var arr1 = [];
 var arr2 = [];
+
+function checkData2(){
+	for(let i =0;i<Data2.length;i++){
+		for(let j = 0;j<Data2.length;j++){
+			if(Data1[i][0] === Data2[j][0] ){
+				Data1[i].push(Data2[j][1]);
+			}
+		}
+	}
+	console.log('hi');
+}
+
 $(document).ready(function(){
 	 var startTime = new Date().getTime();
 	 var urlData1 = "data/data1.json";
@@ -33,6 +45,7 @@ $(document).ready(function(){
 						}
 					}
 			}
+			checkData2();
 		})	
 
 	$.get(urlData3,function(data){
@@ -42,15 +55,6 @@ $(document).ready(function(){
 					Data3.push(objkey[i]);
 				}
 			})
-
-	for(let i =0;i<Data2.length;i++){
-		for(let j = 0;j<Data2.length;j++){
-			if(Data1[i][0] === Data2[j][0] ){
-				Data1[i].push(Data2[j][1]);
-			}
-		}
-		console.log('hi');
-	}
 });
 
 $(document).on('click','tr',function(){
