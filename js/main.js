@@ -11,7 +11,9 @@ $(document).ready(function(){
 	$.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-				Data1 += data[i].key+','+data[i].cell1+','+data[i].cell2+','+data[i].cell3+','+data[i].cell4+','+data[i].cell5+','+data[i].cell6+','+data[i].cell7
+				for (let key in data[i]){
+					Data1 += data[i][key];
+				}
 		}
 		console.log(Data1);
 	})
