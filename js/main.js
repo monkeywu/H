@@ -13,7 +13,7 @@ function checkData2(callback){
 			}
 		}
 	}
-	callback();
+	callback(addData);
 	console.log('2');
 }
 
@@ -56,7 +56,7 @@ $(document).ready(function(){
 					}
 				}
 		}
-		addData(checkData3(checkData2));
+		checkData2(checkData3);
 	})
 
 	$.get(urlData2,function(data){
