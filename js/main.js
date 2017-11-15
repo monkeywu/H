@@ -45,7 +45,8 @@ $(document).ready(function(){
 	 var urlData2 = "data/data2.json";
 	 var urlData3 = "data/data3.json";
 
-	$.get(urlData1,function(data){
+	function ajax1() {
+		$.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
@@ -57,7 +58,9 @@ $(document).ready(function(){
 				}
 		}
 	})
+	}
 
+	function ajax2(){
 	$.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
@@ -70,7 +73,9 @@ $(document).ready(function(){
 					}
 			}
 		})	
+	}
 
+	function ajax3(){
 	$.get(urlData3,function(data){
 				var objkey = Object.values(data);
 				var length = Object.values(data).length;
@@ -78,8 +83,11 @@ $(document).ready(function(){
 					Data3.push(objkey[i]);
 				}
 			})
-});
+	}
 
+	$.when(ajax1(), ajax2(), ajax3())
+	.done(checkData2(checkData3));
+});
 $(document).on('click','tr',function(){
 	$(this).toggleClass('selected');
 })
@@ -89,4 +97,4 @@ $(document).on('click','.star',function(event){
 	$(this).toggleClass('selected');
 })
 
-checkData2(checkData3);
+
