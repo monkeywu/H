@@ -43,7 +43,6 @@ $(document).ready(function(){
 				}
 		}
 		checkData2();
-		checkData3();
 	})
 
 	$.get(urlData2,function(data){
@@ -65,6 +64,7 @@ $(document).ready(function(){
 				for(let i = 0;i<length;i++){
 					Data3.push(objkey[i]);
 				}
+				checkData3();
 			})
 });
 
