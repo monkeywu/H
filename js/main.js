@@ -23,6 +23,9 @@ function checkData3(){
 			}
 		}
 	}
+	var endTime = new Date().getTime();
+	var costTime = Math.floor(endTime - startTime )
+	$('.usuage').html(costTime);
 }
 
 function addData(){
