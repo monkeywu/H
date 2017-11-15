@@ -32,6 +32,7 @@ $(document).ready(function(){
 					}
 				}
 		}
+		checkData2();
 	})
 
 	$.get(urlData2,function(data){
@@ -45,7 +46,6 @@ $(document).ready(function(){
 						}
 					}
 			}
-			checkData2();
 		})	
 
 	$.get(urlData3,function(data){
