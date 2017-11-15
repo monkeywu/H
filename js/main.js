@@ -12,7 +12,7 @@ function checkData2(callback){
 			}
 		}
 	}
-	callback(addData);
+	callback();
 }
 
 function checkData3(callback){
@@ -23,14 +23,15 @@ function checkData3(callback){
 			}
 		}
 	}
-	callback();
+	callback(addData);
 }
 
-function addData(){
+function addData(callback){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td><td>'+Data1[i][1]+'</td><td>'+Data1[i][2]+'</td><td>'+Data1[i][3]+'</td><td>'+Data1[i][4]+'</td><td>'+Data1[i][5]+'</td><td>'+Data1[i][6]+'</td><td>'+Data1[i][7]+'</td><td>'+Data1[i][8]+'</td><td>'+Data1[i][9]+'</td></tr>');
 	}
+	callback();
 }
 
 $(document).ready(function(){
