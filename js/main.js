@@ -56,7 +56,6 @@ $(document).ready(function(){
 					}
 				}
 		}
-		checkData2(checkData3)
 	})
 
 	$.get(urlData2,function(data){
@@ -89,3 +88,5 @@ $(document).on('click','.star',function(event){
 	event.stopPropagation();
 	$(this).toggleClass('selected');
 })
+
+checkData2(checkData3);
