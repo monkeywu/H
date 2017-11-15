@@ -50,7 +50,7 @@ $(document).ready(function(){
 					}
 				}
 		}
-		checkData2();
+		checkData2(checkData3);
 	})
 
 	$.get(urlData2,function(data){
