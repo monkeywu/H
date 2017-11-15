@@ -14,7 +14,6 @@ function checkData2(callback){
 		}
 	}
 	callback();
-	console.log('data2')
 }
 
 function checkData3(){
@@ -28,7 +27,6 @@ function checkData3(){
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
 	$('.usuage').html(costTime);
-	console.log('data3')
 }
 
 function addData(){
@@ -55,7 +53,7 @@ $(document).ready(function(){
 					}
 				}
 		}
-		addData(checkData2(checkData3));
+		addData(checkData3(checkData2));
 	})
 
 	$.get(urlData2,function(data){
