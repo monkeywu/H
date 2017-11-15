@@ -45,8 +45,7 @@ $(document).ready(function(){
 	 var urlData2 = "data/data2.json";
 	 var urlData3 = "data/data3.json";
 
-	function ajax1() {
-		$.get(urlData1,function(data){
+	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
@@ -58,10 +57,8 @@ $(document).ready(function(){
 				}
 		}
 	})
-	}
 
-	function ajax2(){
-	$.get(urlData2,function(data){
+	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
 					for (let key in data[i]){
@@ -73,9 +70,7 @@ $(document).ready(function(){
 					}
 			}
 		})	
-	}
 
-	function ajax3(){
 	$.get(urlData3,function(data){
 				var objkey = Object.values(data);
 				var length = Object.values(data).length;
@@ -83,11 +78,19 @@ $(document).ready(function(){
 					Data3.push(objkey[i]);
 				}
 			})
-	}
 
-	$.when(ajax1(), ajax2(), ajax3())
-	.done(checkData2(checkData3));
+	　$.when(ajax1, ajax2).done(function(){
+
+   　　　　 alert("done");
+
+　　　　}).fail(function(){
+　　
+   　　　　 alert("fail");
+    
+　　　　});
+	
 });
+
 $(document).on('click','tr',function(){
 	$(this).toggleClass('selected');
 })
