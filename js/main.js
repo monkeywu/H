@@ -13,7 +13,7 @@ $(document).ready(function(){
 		var length = data.length;
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
-				Data1 += data;
+				Data1 += data[i];
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 				if(key === "key"){
