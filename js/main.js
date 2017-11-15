@@ -16,8 +16,11 @@ function checkData2(){
 
 function checkData3(){
 	for(let i =0;i<Data3.length;i++){
+		console.log('1');
 		for(let j = 0;j<Data3.length;j++){
+			console.log('2');
 			if(Data1[i][4] === Data3[j][0] ){
+				console.log('3');
 				Data1[i].push(Data3[j][1]);
 			}
 		}
