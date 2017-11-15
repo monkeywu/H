@@ -23,6 +23,7 @@ function checkData3(){
 			}
 		}
 	}
+	addData();
 }
 
 function addData(){
@@ -75,7 +76,6 @@ $(document).ready(function(){
 					Data3.push(objkey[i]);
 				}
 				checkData3();
-				addData();
 			})
 });
 
