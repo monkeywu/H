@@ -12,6 +12,7 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
+					console.log(data[0][key]);
 					Data1 += data[i][key];
 				}
 		}
