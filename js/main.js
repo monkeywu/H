@@ -10,14 +10,12 @@ $(document).ready(function(){
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
-				/*if(key === "key"){
+				if(key === "key"){
 					$('tr').last().append('<td><span class="star"></span>'+data[i][key]+'</td>');	
 				} else {
 					$('tr').last().append('<td>'+data[i][key]+'</td>');	
-				}*/
-				$('tr').last().append('<td>'+data[i][key]+'</td>')
+				}
 			}
-			$('tobdy').find('td').eq(0).append('<span class="star"></span>');
 		}
 
 		$.get(urlData2,function(data){
