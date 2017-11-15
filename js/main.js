@@ -4,7 +4,7 @@ var Data3 = [];
 var arr1 = [];
 var arr2 = [];
 
-function checkData2(callback){
+function checkData2(){
 	for(let i =0;i<Data2.length;i++){
 		for(let j = 0;j<Data2.length;j++){
 			if(Data1[i][0] === Data2[j][0] ){
@@ -12,7 +12,6 @@ function checkData2(callback){
 			}
 		}
 	}
-	callback();
 }
 
 function checkData3(addData){
