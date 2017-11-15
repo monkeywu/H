@@ -14,6 +14,7 @@ function checkData2(callback){
 		}
 	}
 	callback();
+	console.log('2');
 }
 
 function checkData3(){
@@ -27,6 +28,7 @@ function checkData3(){
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
 	$('.usuage').html(costTime);
+	console.log('3');
 }
 
 function addData(){
@@ -34,7 +36,7 @@ function addData(){
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td><td>'+Data1[i][1]+'</td><td>'+Data1[i][2]+'</td><td>'+Data1[i][3]+'</td><td>'+Data1[i][4]+'</td><td>'+Data1[i][5]+'</td><td>'+Data1[i][6]+'</td><td>'+Data1[i][7]+'</td><td>'+Data1[i][8]+'</td><td>'+Data1[i][9]+'</td></tr>');
 	}
-	console.log('add');
+	console.log('1');
 }
 
 $(document).ready(function(){
@@ -53,7 +55,7 @@ $(document).ready(function(){
 					}
 				}
 		}
-		addData(checkData3(checkData2));
+		checkData3(checkData2(addData));
 	})
 
 	$.get(urlData2,function(data){
