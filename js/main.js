@@ -29,6 +29,7 @@ function addData(){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star">'+Data1[0]+'</span></td><td>'+Data1[1]+'</td><td>'+Data1[2]+'</td><td>'+Data1[3]+'</td><td>'+Data1[4]+'</td><td>'+Data1[5]+'</td><td>'+Data1[6]+'</td><td>'+Data1[7]+'</td><td>'+Data1[8]+'</td><td>'+Data1[9]+'</td></tr>');
+	}
 }
 
 $(document).ready(function(){
