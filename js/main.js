@@ -11,9 +11,9 @@ $(document).ready(function(){
 
 	$.get(urlData1,function(data){
 		var length = data.length;
-		console.log(data);
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
+				Data1 += data;
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 				if(key === "key"){
@@ -23,7 +23,7 @@ $(document).ready(function(){
 				}
 			}
 		}
-
+		console.log(Data1);
 		$.get(urlData2,function(data){
 			for(let i = 0;i<data.length;i++){
 				var dataKey = $('tbody').find('tr').eq(i).find('td').eq(0).text();
