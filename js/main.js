@@ -1,6 +1,6 @@
 var Data1 = [];
-var Data2;
-var Data3;
+var Data2 = [];
+var Data3 = [];
 
 $(document).ready(function(){
 	 var startTime = new Date().getTime();
@@ -15,15 +15,23 @@ $(document).ready(function(){
 					Data1.push(data[i][key]);
 				}
 		}
-		console.log(Data1);
 	})
 
 	$.get(urlData2,function(data){
-			console.log('data2:'+data)
+			var length = data.length;
+			for (let i =0;i<length;i++){
+					for (let key in data[i]){
+						Data2.push(data[i][key]);
+					}
+			}
 		})	
 
 	$.get(urlData3,function(data){
-				console.log('data3:'+data)
+				var objkey = Object.values(data);
+				var length = Object.values(data).length;
+				for(let i = 0;i<length;i++){
+					Data3.push(data[i]);
+				}
 			})
 
 });
