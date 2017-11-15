@@ -1,7 +1,7 @@
 var Data1 = [];
 var Data2 = [];
 var Data3 = [];
-
+var arr = [];
 $(document).ready(function(){
 	 var startTime = new Date().getTime();
 	 var urlData1 = "data/data1.json";
@@ -12,7 +12,11 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
-					Data1.push(data[i][key]);
+					arr.push(data[i][key]);
+					if(arr.length > 8){
+						Data1.push(arr);
+						arr = [];
+					}
 				}
 		}
 	})
