@@ -12,7 +12,16 @@ function checkData2(){
 			}
 		}
 	}
-	console.log('hi');
+}
+
+function checkData3(){
+	for(let i =0;i<Data3.length;i++){
+		for(let j = 0;j<Data3.length;j++){
+			if(Data1[i][4] === Data3[j][0] ){
+				Data1[i].push(Data3[j][1]);
+			}
+		}
+	}
 }
 
 $(document).ready(function(){
@@ -33,6 +42,7 @@ $(document).ready(function(){
 				}
 		}
 		checkData2();
+		checkData3();
 	})
 
 	$.get(urlData2,function(data){
