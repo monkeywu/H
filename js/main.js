@@ -11,8 +11,7 @@ $(document).ready(function(){
 
 	$.get(urlData1,function(data){
 		var length = data.length;
-		Data1 += data;
-		console.log(Data1);
+		console.log(data);
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				$('tbody').append('<tr></tr>');
