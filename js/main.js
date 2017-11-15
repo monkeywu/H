@@ -28,10 +28,7 @@ function checkData3(){
 function addData(){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
-		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td></tr>');
-		for(let j = 0;j<9;j++){
-			$('tbody td:last-child').append('<td>'+Data1[j][1]+'</td><td>'+Data1[j][2]+'</td><td>'+Data1[j][3]+'</td><td>'+Data1[j][4]+'</td><td>'+Data1[j][5]+'</td><td>'+Data1[j][6]+'</td><td>'+Data1[j][7]+'</td><td>'+Data1[j][8]+'</td><td>'+Data1[j][9]+'</td>');
-		}
+		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td><td>'+Data1[i][1]+'</td><td>'+Data1[i][2]+'</td><td>'+Data1[i][3]+'</td><td>'+Data1[i][4]+'</td><td>'+Data1[i][5]+'</td><td>'+Data1[i][6]+'</td><td>'+Data1[i][7]+'</td><td>'+Data1[i][8]+'</td><td>'+Data1[i][9]+'</td></tr>');
 	}
 }
 
