@@ -1,7 +1,8 @@
 var Data1 = [];
 var Data2 = [];
 var Data3 = [];
-var arr = [];
+var arr1 = [];
+var arr2 = [];
 $(document).ready(function(){
 	 var startTime = new Date().getTime();
 	 var urlData1 = "data/data1.json";
@@ -12,10 +13,10 @@ $(document).ready(function(){
 		var length = data.length;
 		for (let i =0;i<length;i++){
 				for (let key in data[i]){
-					arr.push(data[i][key]);
-					if(arr.length === 8){
-						Data1.push(arr);
-						arr = [];
+					arr1.push(data[i][key]);
+					if(arr1.length === 8){
+						Data1.push(arr1);
+						arr1 = [];
 					}
 				}
 		}
@@ -25,7 +26,11 @@ $(document).ready(function(){
 			var length = data.length;
 			for (let i =0;i<length;i++){
 					for (let key in data[i]){
-						Data2.push(data[i][key]);
+						arr2.push(data[i][key]);
+						if(arr2.length === 2){
+							Data2.push(arr2);
+							arr2 = [];
+						}
 					}
 			}
 		})	
@@ -38,6 +43,14 @@ $(document).ready(function(){
 				}
 			})
 
+	for(let i =0;i<Data2.length;i++){
+		for(let j = 0;j<Data2.length;j++){
+			if(Data1[i][0] === Data2[j][0] ){
+				Data1[i].push(Data2[j][1]);
+			}
+		}
+		console.log('hi');
+	}
 });
 
 $(document).on('click','tr',function(){
