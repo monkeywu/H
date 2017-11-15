@@ -30,8 +30,7 @@ function addData(){
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star">'+Data1[i][0]+'</span></td></tr>');
 		for(let j = 0;j<9;j++){
-			$('tbody tr:last-child').append()
-			append('<tr>'+Data1[j][1]+'</td><td>'+Data1[j][2]+'</td><td>'+Data1[j][3]+'</td><td>'+Data1[j][4]+'</td><td>'+Data1[j][5]+'</td><td>'+Data1[j][6]+'</td><td>'+Data1[j][7]+'</td><td>'+Data1[j][8]+'</td><td>'+Data1[j][9]+'</td></tr>');
+			$('tbody tr:last-child').append('<td>'+Data1[j][1]+'</td><td>'+Data1[j][2]+'</td><td>'+Data1[j][3]+'</td><td>'+Data1[j][4]+'</td><td>'+Data1[j][5]+'</td><td>'+Data1[j][6]+'</td><td>'+Data1[j][7]+'</td><td>'+Data1[j][8]+'</td><td>'+Data1[j][9]+'</td>');
 		}
 	}
 }
