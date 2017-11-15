@@ -11,11 +11,9 @@ $(document).ready(function(){
 	$.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-				$.each(data,function(index,value){
-					Data1 += value.key+','+value.cell1+','+value.cell2+','+value.cell3+','+value.cell4+','+value.cell5+','+value.cell6+','+value.cell7
-				})
+				Data1 += data[i].key+','+data[i].cell1+','+data[i].cell2+','+data[i].cell3+','+data[i].cell4+','+data[i].cell5+','+data[i].cell6+','+data[i].cell7
 		}
-		
+		console.log(Data1);
 	})
 
 	$.get(urlData2,function(data){
