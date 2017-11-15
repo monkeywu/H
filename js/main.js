@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
 				$.each(data,function(index,value){
-					Data1 += value.key+','+value.cell1+','+value.cell2+','+value.cell3+','+value.cell4+','+value.cell5+','+value.cell6+','++value.cell7
+					Data1 += value.key+','+value.cell1+','+value.cell2+','+value.cell3+','+value.cell4+','+value.cell5+','+value.cell6+','+value.cell7
 				})
 				
 				$('tbody').append('<tr></tr>');
