@@ -30,7 +30,7 @@ $(document).ready(function(){
 				var objkey = Object.values(data);
 				var length = Object.values(data).length;
 				for(let i = 0;i<length;i++){
-					Data3.push(data[i]);
+					Data3.push(objkey[i]);
 				}
 			})
 
