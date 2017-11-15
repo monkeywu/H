@@ -12,8 +12,10 @@ $(document).ready(function(){
 		var length = data.length;
 		$('table').append('<tbody></tbody>');
 		for (let i =0;i<length;i++){
-				Data1 += data[i];
-				console.log(data[i]);
+				$.each(data,function(index,value){
+					Data1 += value.key+','+value.cell1+','+value.cell2+','+value.cell3+','+value.cell4+','+value.cell5+','+value.cell6+','++value.cell7
+				})
+				
 				$('tbody').append('<tr></tr>');
 			for (let key in data[i]) {
 				if(key === "key"){
