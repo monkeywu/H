@@ -22,7 +22,7 @@ function checkData2(){
 function checkData3(){
 
 	Data3 = Data3.sort(function (a, b) {
-	    return a.key.slice(1) - b.key.slice(1)
+	    return a.cell4.slice(1) - b.cell4.slice(1)
 	});
 
 	for(let i =0;i<Data3.length;i++){
