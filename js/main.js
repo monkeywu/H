@@ -1,5 +1,5 @@
 var Data1 = [];
-var Data2 = [];
+var Data2 ;
 var Data3 = [];
 var arr1 = [];
 var arr2 = [];
@@ -57,9 +57,7 @@ $(document).ready(function(){
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-					Data2.push(data[i]);
-					
-					console.log(Data2[i])
+					Data2 += data;
 			}
 			console.log(Data2);
 		})	
