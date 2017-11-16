@@ -57,14 +57,11 @@ $(document).ready(function(){
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-					for (let key in data[i]){
-						arr2.push(data[i][key]);
-						if(arr2.length === 2){
-							Data2.push(arr2);
-							arr2 = [];
-						}
-					}
+					Data2.push(data[i]);
+					
+					console.log(Data2[i])
 			}
+			console.log(Data2);
 		})	
 
 	ajax3 = $.get(urlData3,function(data){
