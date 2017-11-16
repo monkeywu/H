@@ -6,23 +6,21 @@ var arr2 = [];
 var startTime = new Date().getTime();
 
 function checkData2(){
+	Data2.sort();
 	for(let i =0;i<Data2.length;i++){
-		for(let j = 0;j<Data2.length;j++){
-			if(Data1[i][0] === Data2[j][0] ){
-				Data1[i].push(Data2[j][1]);
+			if(Data1[i][0] === Data2[i][0] ){
+				Data1[i].push(Data2[i][1]);
 			}
-		}
 	}
 	console.log('2');
 }
 
 function checkData3(){
+	Data3.sort();
 	for(let i =0;i<Data3.length;i++){
-		for(let j = 0;j<Data3.length;j++){
-			if(Data1[i][4] === Data3[j].cell4 ){
-				Data1[i].push(Data3[j].cell9);
+			if(Data1[i][4] === Data3[i].cell4 ){
+				Data1[i].push(Data3[i].cell9);
 			}
-		}
 	}
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
@@ -46,22 +44,26 @@ $(document).ready(function(){
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-					arr1.push(data[i].key,data[i].cell1,data[i].cell2,data[i].cell3,data[i].cell4,data[i].cell5,data[i].cell6,data[i].cell7);
+				for (let key in data[i]){
+					arr1.push(data[i][key]);
 					if(arr1.length === 8){
 						Data1.push(arr1);
 						arr1 = [];
 					}
+				}
 		}
 	})
 
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-						arr2.push(data[i].key,data[i].cell8);
+					for (let key in data[i]){
+						arr2.push(data[i][key]);
 						if(arr2.length === 2){
 							Data2.push(arr2);
 							arr2 = [];
 						}
+					}
 			}
 		})	
 
