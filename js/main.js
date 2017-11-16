@@ -20,15 +20,12 @@ function checkData2(){
 }
 
 function checkData3(){
-
-	Data3 = Data3.sort(function (a, b) {
-	    return a.cell4.slice(1) - b.cell4.slice(1)
-	});
-
 	for(let i =0;i<Data3.length;i++){
-			if(Data1[i][4] === Data3[i].cell4 ){
-				Data1[i].push(Data3[i].cell9);
+		for(let j = 0;j<Data3.length;j++){
+			if(Data1[i][4] === Data3[j].cell4 ){
+				Data1[i].push(Data3[j].cell9);
 			}
+		}
 	}
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
