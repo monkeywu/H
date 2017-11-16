@@ -6,6 +6,7 @@ var arr2 = [];
 var startTime = new Date().getTime();
 
 function checkData2(){
+
 	Data2 = Data2.sort(function (a, b) {
 	    return a.key.slice(1) - b.key.slice(1)
 	});
@@ -19,7 +20,11 @@ function checkData2(){
 }
 
 function checkData3(){
-	Data3.sort();
+
+	Data3 = Data3.sort(function (a, b) {
+	    return a.key.slice(1) - b.key.slice(1)
+	});
+
 	for(let i =0;i<Data3.length;i++){
 			if(Data1[i][4] === Data3[i].cell4 ){
 				Data1[i].push(Data3[i].cell9);
