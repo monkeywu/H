@@ -12,8 +12,8 @@ function checkData2(){
 	});
 
 	for(let i =0;i<Data2.length;i++){
-			if(Data1[i][0] === Data2[i][0] ){
-				Data1[i].push(Data2[i][1]);
+			if(Data1[i][0] === Data2[i].key ){
+				Data1[i].push(Data2[i].cell8);
 			}
 	}
 	console.log('2');
