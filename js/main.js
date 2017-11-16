@@ -1,12 +1,15 @@
 var Data1 = [];
-var Data2 ={};
+var Data2 = null;
 var Data3 = [];
 var arr1 = [];
 var arr2 = [];
 var startTime = new Date().getTime();
 
 function checkData2(){
-	Data2.sort();
+	Data2 = Data2.sort(function (a, b) {
+	    return a.key.slice(1) - b.key.slice(1)
+	});
+
 	for(let i =0;i<Data2.length;i++){
 			if(Data1[i][0] === Data2[i][0] ){
 				Data1[i].push(Data2[i][1]);
@@ -57,9 +60,9 @@ $(document).ready(function(){
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-					console.log(data[i]);
 					Data2 += data[i];
 			}
+			console.log(Data2);
 		})	
 
 	ajax3 = $.get(urlData3,function(data){
