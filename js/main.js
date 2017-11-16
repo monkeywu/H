@@ -60,7 +60,7 @@ $(document).ready(function(){
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-					Data2.pust(data[i]);
+					Data2.push(data[i]);
 			}
 			console.log(Data2);
 		})	
