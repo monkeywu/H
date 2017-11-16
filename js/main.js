@@ -46,26 +46,22 @@ $(document).ready(function(){
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-				for (let key in data[i]){
-					arr1.push(data[i][key]);
+					arr1.push(data[i].key,data[i].cell1,data[i].cell2,data[i].cell3,data[i].cell4,data[i].cell5,data[i].cell6,data[i].cell7);
 					if(arr1.length === 8){
 						Data1.push(arr1);
 						arr1 = [];
 					}
-				}
 		}
 	})
 
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
 			for (let i =0;i<length;i++){
-					for (let key in data[i]){
-						arr2.push(data[i][key]);
+						arr2.push(data[i].key,data[i].cell8);
 						if(arr2.length === 2){
 							Data2.push(arr2);
 							arr2 = [];
 						}
-					}
 			}
 		})	
 
