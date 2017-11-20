@@ -21,8 +21,6 @@ function checkData3(){
 	Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
-
-	}
 //讀取結束後將秒數輸出至html上
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
