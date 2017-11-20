@@ -17,7 +17,7 @@ function checkData2(){
 function checkData3(){
 
 	for(let key in Data3){
-		Data3_detail.push(Data3);
+		Data3_detail.push(Data3[key]);
 	}
 
 	Data3_detail = Data3_detail.sort(function (a, b) {
