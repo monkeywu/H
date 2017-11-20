@@ -1,7 +1,7 @@
 var Data1 ;
 var Data2 ;
-var Data3 = [];
-
+var Data3 ;
+var Data3_detail = [];
 //網頁讀取開始時間
 var startTime = new Date().getTime();
 
@@ -16,7 +16,11 @@ function checkData2(){
 //將Data3內資料整理
 function checkData3(){
 
-	Data3 = Data3.sort(function (a, b) {
+	for(let key in Data3){
+		Data3_detail.push(Data3);
+	}
+
+	Data3_detail = Data3_detail.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
 
@@ -36,21 +40,15 @@ $(document).ready(function(){
 	 var urlData3 = "data/data3.json";
 	 //從data1讀取json，再丟到Data1以供之後輸出
 	ajax1 = $.get(urlData1,function(data){
-		var length = data.length;
 		Data1 = data;
 	})
 	//從data2讀取json，再丟到Data2以供之後輸出
 	ajax2 = $.get(urlData2,function(data){
-			var length = data.length;
 			Data2 = data;
 		})	
 	//從data3讀取json，再把資料丟到Data3以供之後輸出
 	ajax3 = $.get(urlData3,function(data){
-				var objkey = Object.values(data);
-				var length = Object.values(data).length;
-				for(let i = 0;i<length;i++){
-					Data3.push(objkey[i]);
-				}
+				Data3 = data;
 			})
 	//當三筆ajax都讀取完後執行function
 	　$.when(ajax1, ajax2, ajax3).done(function(){
