@@ -39,7 +39,7 @@ $(document).ready(function(){
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-				Data1.push(data[i]);
+				Data1.push(data);
 		}
 	})
 	//從data2讀取json，再丟到Data2以供之後輸出
