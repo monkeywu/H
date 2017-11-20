@@ -1,6 +1,6 @@
-var Data1 ;
+var Data1 = [];
 var Data2 ;
-var Data3 = [];
+var Data3 ;
 var arr1 = [];
 var arr2 = [];
 
@@ -21,6 +21,7 @@ function checkData3(){
 	Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
+
 }
 
 //將比對完的data1輸出至html上
@@ -35,7 +36,7 @@ $(document).ready(function(){
 	 var urlData1 = "data/data1.json";
 	 var urlData2 = "data/data2.json";
 	 var urlData3 = "data/data3.json";
-	 //從data1讀取json，每八筆資料組成一個小陣列，再丟到Data1以供之後輸出
+	 //從data1讀取json，再丟到Data1以供之後輸出
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		Data1 = data;
@@ -58,8 +59,8 @@ $(document).ready(function(){
 		//讀取結束後將秒數輸出至html上
 		var endTime = new Date().getTime();
 		var costTime = Math.floor(endTime - startTime );
-		$('.usuage').html(costTime);
-		 
+		$('.usuage').html(costTime); 
+		
    　　　checkData2();
    		checkData3();
    		addData();
