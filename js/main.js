@@ -21,10 +21,6 @@ function checkData3(){
 	Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
-//讀取結束後將秒數輸出至html上
-	var endTime = new Date().getTime();
-	var costTime = Math.floor(endTime - startTime )
-	$('.usuage').html(costTime);
 }
 
 //將比對完的data1輸出至html上
@@ -63,9 +59,11 @@ $(document).ready(function(){
 			})
 	//當三筆ajax都讀取完後執行function
 	　$.when(ajax1, ajax2, ajax3).done(function(){
+		//讀取結束後將秒數輸出至html上
 		var endTime = new Date().getTime();
 		var costTime = Math.floor(endTime - startTime );
-		$('.usuage').html(costTime); 
+		$('.usuage').html(costTime);
+		 
    　　　checkData2();
    		checkData3();
    		addData();
