@@ -16,9 +16,11 @@ function checkData2(){
 //將Data3內資料整理
 function checkData3(){
 
-	for(let key in Data3){
-		Data3_detail.push(Data3[key]);
-	}
+	var objkey = Object.values(Data3);
+	var length = Object.values(Data3).length;
+	for(let i = 0;i<length;i++){
+			Data3_detail.push(objkey[i]);
+		}
 
 	Data3_detail = Data3_detail.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
