@@ -1,5 +1,5 @@
 var Data1 ;
-var Data2 = [];
+var Data2 ;
 var Data3 = [];
 var arr1 = [];
 var arr2 = [];
@@ -43,9 +43,7 @@ $(document).ready(function(){
 	//從data2讀取json，再丟到Data2以供之後輸出
 	ajax2 = $.get(urlData2,function(data){
 			var length = data.length;
-			for (let i =0;i<length;i++){
-					Data2.push(data[i]);
-			}
+			Data2 = data;
 		})	
 	//從data3讀取json，再把資料丟到Data3以供之後輸出
 	ajax3 = $.get(urlData3,function(data){
