@@ -1,8 +1,6 @@
 var Data1 ;
 var Data2 ;
 var Data3 = [];
-var arr1 = [];
-var arr2 = [];
 
 //網頁讀取開始時間
 var startTime = new Date().getTime();
