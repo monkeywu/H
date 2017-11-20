@@ -18,6 +18,9 @@ function checkData3(){
 	Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
+	var endTime = new Date().getTime();
+	var costTime = Math.floor(endTime - startTime );
+	$('.usuage').html(costTime); 
 }
 
 function addData(){
@@ -55,9 +58,6 @@ $(document).ready(function(){
 			})
 
 	　$.when(ajax1, ajax2, ajax3).done(function(){
-		var endTime = new Date().getTime();
-		var costTime = Math.floor(endTime - startTime );
-		$('.usuage').html(costTime); 
    　　　checkData2();
    		checkData3();
    		addData();
