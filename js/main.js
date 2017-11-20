@@ -21,9 +21,6 @@ function checkData3(){
 }
 
 function addData(){
-	var endTime = new Date().getTime();
-	var costTime = Math.floor(endTime - startTime );
-	$('.usuage').html(costTime); 
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
 		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i].key+'</td><td>'+Data1[i].cell1+'</td><td>'+Data1[i].cell2+'</td><td>'+Data1[i].cell3+'</td><td>'+Data1[i].cell4+'</td><td>'+Data1[i].cell5+'</td><td>'+Data1[i].cell6+'</td><td>'+Data1[i].cell7+'</td><td>'+Data2[i].cell8+'</td><td>'+Data3[i].cell9+'</td></tr>');
@@ -58,6 +55,9 @@ $(document).ready(function(){
 			})
 
 	　$.when(ajax1, ajax2, ajax3).done(function(){
+		var endTime = new Date().getTime();
+		var costTime = Math.floor(endTime - startTime );
+		$('.usuage').html(costTime); 
    　　　checkData2();
    		checkData3();
    		addData();
