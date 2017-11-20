@@ -72,6 +72,7 @@ $(document).ready(function(){
 
 $(document).on('click','tr',function(){
 	$(this).toggleClass('selected');
+	$(this).siblings().removeClass('selected');
 })
 
 $(document).on('click','.star',function(event){
