@@ -7,7 +7,7 @@ var startTime = new Date().getTime();
 
 function checkData2(){
 
-	Data2 = Data2.sort(function (a, b) {
+	/*Data2 = Data2.sort(function (a, b) {
 	    return a.key.slice(1) - b.key.slice(1)
 	});
 
@@ -15,12 +15,12 @@ function checkData2(){
 			if(Data1[i][0] === Data2[i].key ){
 				Data1[i].push(Data2[i].cell8);
 			}
-	}
+	}*/
 }
 
 function checkData3(){
 
-	Data3 = Data3.sort(function (a, b) {
+	/*Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
 
@@ -31,7 +31,7 @@ function checkData3(){
 	}
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
-	$('.usuage').html(costTime);
+	$('.usuage').html(costTime); */
 }
 
 function addData(){
@@ -49,13 +49,7 @@ $(document).ready(function(){
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
 		for (let i =0;i<length;i++){
-				for (let key in data[i]){
-					arr1.push(data[i][key]);
-					if(arr1.length === 8){
-						Data1.push(arr1);
-						arr1 = [];
-					}
-				}
+				Data1.push(data[i]);
 		}
 	})
 
