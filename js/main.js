@@ -29,6 +29,9 @@ function checkData3(){
 				Data1[i].push(Data3[i].cell9);
 			}
 	}
+	var endTime = new Date().getTime();
+	var costTime = Math.floor(endTime - startTime )
+	$('.usuage').html(costTime);
 }
 
 function addData(){
@@ -72,9 +75,7 @@ $(document).ready(function(){
 			})
 
 	　$.when(ajax1, ajax2, ajax3).done(function(){
-			var endTime = new Date().getTime();
-			var costTime = Math.floor(endTime - startTime )
-			$('.usuage').html(costTime);
+
    　　　　 checkData2();
    		   checkData3();
    		   addData();
