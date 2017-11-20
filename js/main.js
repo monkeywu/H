@@ -7,37 +7,37 @@ var startTime = new Date().getTime();
 
 function checkData2(){
 
-	/*Data2 = Data2.sort(function (a, b) {
+	Data2 = Data2.sort(function (a, b) {
 	    return a.key.slice(1) - b.key.slice(1)
 	});
 
 	for(let i =0;i<Data2.length;i++){
-			if(Data1[i][0] === Data2[i].key ){
-				Data1[i].push(Data2[i].cell8);
+			if(Data1[i].key === Data2[i].key ){
+				Data1[i].cell8 = Data2[i].cell8;
 			}
-	}*/
+	}
 }
 
 function checkData3(){
 
-	/*Data3 = Data3.sort(function (a, b) {
+	Data3 = Data3.sort(function (a, b) {
 	    return a.cell4.match(/\d+/g)[0] - b.cell4.match(/\d+/g)[0];
 	});
 
 	for(let i =0;i<Data3.length;i++){
-			if(Data1[i][4] === Data3[i].cell4 ){
-				Data1[i].push(Data3[i].cell9);
+			if(Data1[i].cell4 === Data3[i].cell4 ){
+				Data1[i].cell9 = Data3[i].cell9;
 			}
 	}
 	var endTime = new Date().getTime();
 	var costTime = Math.floor(endTime - startTime )
-	$('.usuage').html(costTime); */
+	$('.usuage').html(costTime); 
 }
 
 function addData(){
 	$('table').append('<tbody></tbody>');
 	for(let i =0;i<Data1.length;i++){
-		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i][0]+'</td><td>'+Data1[i][1]+'</td><td>'+Data1[i][2]+'</td><td>'+Data1[i][3]+'</td><td>'+Data1[i][4]+'</td><td>'+Data1[i][5]+'</td><td>'+Data1[i][6]+'</td><td>'+Data1[i][7]+'</td><td>'+Data1[i][8]+'</td><td>'+Data1[i][9]+'</td></tr>');
+		$('tbody').append('<tr><td><span class="star"></span>'+Data1[i].key+'</td><td>'+Data1[i].cell1+'</td><td>'+Data1[i].cell2+'</td><td>'+Data1[i].cell3+'</td><td>'+Data1[i].cell4+'</td><td>'+Data1[i].cell5+'</td><td>'+Data1[i].cell6+'</td><td>'+Data1[i].cell7+'</td><td>'+Data1[i].cell8+'</td><td>'+Data1[i].cell9+'</td></tr>');
 	}
 }
 
