@@ -38,9 +38,7 @@ $(document).ready(function(){
 	 //從data1讀取json，每八筆資料組成一個小陣列，再丟到Data1以供之後輸出
 	ajax1 = $.get(urlData1,function(data){
 		var length = data.length;
-		for (let i =0;i<length;i++){
-				Data1 = data;
-		}
+		Data1 = data;
 	})
 	//從data2讀取json，再丟到Data2以供之後輸出
 	ajax2 = $.get(urlData2,function(data){
